@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Index";
+    var image = @ViewBag.FilePath;
+}
+
+<html>
+    <head>
+        <title>Assignment</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            @using (Html.BeginForm("DrawShap", "Home", FormMethod.Post))
+            {
+                <div class="col-sm-8 col-md-8" style="margin-top:1%">
+                @Html.TextBox("shapMesure","Enter from below syntax", new { @class = "form-control" })
+
+                </div>
+                <br />
+                <button class="btn btn-primary">Draw Shap</button>
+            }
+            <ul>
+                <li>
+                    Draw a circle with a radius of 100
+                </li>
+                <li>
+                    Draw a square with a side length of 200
+                </li>
+                <li>
+                    Draw a rectangle with a width of 250 and a height of 400
+                </li>
+                <li>
+                    Draw an octagon with a side length of 200
+                </li>
+                <li>
+                    Draw an isosceles triangle with a first side of 200 and a second side of 100
+                </li>
+                <li>
+                    Draw an scalene triangle with a first side of 200 and a second side of 100 and the third side of 300
+                </li>
+                <li>
+                    Draw an equilateral triangle with a first side of 200
+                </li>
+                <li>
+                    Draw a pentagon with a side length of 200
+                </li>
+                <li>
+                    Draw a hexagon with a side length of 200
+                </li>
+                <li>
+                    Draw a oval with a one radius of 100 and second redius is 200
+                </li>
+            </ul>
+            @*@if (@ViewBag.FilePath !== null)*@
+            @*  *@{
+            <img src="./../Image/cir.jpg" alt="img">
+            @*  *@}
+
+        </div>
+    </body>
+</html>
+
+
